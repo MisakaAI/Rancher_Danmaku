@@ -1,0 +1,86 @@
+{% extends "index.html" %}
+{% block function %}
+{% load static %}
+<div class="parallax">
+    <div class="title">
+        <div class="h1bg"></div>
+        <h1><span class="red">♥</span>弹幕姬の文档<span class="red">♥</span></h1>
+        <a href="http://live.bilibili.com/3472667" target="_blank"><p class="live">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.223 3.086a1.25 1.25 0 0 1 0 1.768L17.08 5.996h1.17A3.75 3.75 0 0 1 22 9.747v7.5a3.75 3.75 0 0 1-3.75 3.75H5.75A3.75 3.75 0 0 1 2 17.247v-7.5a3.75 3.75 0 0 1 3.75-3.75h1.166L5.775 4.855a1.25 1.25 0 1 1 1.767-1.768l2.652 2.652c.079.079.145.165.198.257h3.213c.053-.092.12-.18.199-.258l2.651-2.652a1.25 1.25 0 0 1 1.768 0zm.027 5.42H5.75a1.25 1.25 0 0 0-1.247 1.157l-.003.094v7.5c0 .659.51 1.199 1.157 1.246l.093.004h12.5a1.25 1.25 0 0 0 1.247-1.157l.003-.093v-7.5c0-.69-.56-1.25-1.25-1.25zm-10 2.5c.69 0 1.25.56 1.25 1.25v1.25a1.25 1.25 0 1 1-2.5 0v-1.25c0-.69.56-1.25 1.25-1.25zm7.5 0c.69 0 1.25.56 1.25 1.25v1.25a1.25 1.25 0 1 1-2.5 0v-1.25c0-.69.56-1.25 1.25-1.25z" fill="rgba(14,166,216,1)"/></svg>
+            <span class="room">哔哩哔哩直播间</span>
+        </p></a>
+    </div>
+    <div class="info">
+        <h2>关于弹幕姬的说明</h2>
+        <p class="manuals">
+            为了更好的和粉丝们互动，避免粉丝们看直播的时候打瞌睡。<br>
+            编不下去了……
+        </p>        
+    </div>
+    <div class="log" style="background-color: rgb(255, 235, 127);">
+        <h2>签到</h2>
+        <p class="manuals">发送弹幕“<b> #签到 </b>”可以在直播间签到，每天首次签到成功 +500 积分。</p>
+        <h2>体力</h2>
+        <p class="manuals">默认体力100点，每天刷新，可以发送弹幕“<b> #体力 </b>”查询当前体力值。<br><br>
+            可以发送弹幕“<b> #回复 </b>”回复满体力，暂定每点体力需要10积分，积分不够无法回复。<br>
+            也可以加上数字，例如“<b> #回复10 </b>”可以回复10点体力，扣除100点积分。<br>
+        </p>
+        <h2>积分</h2>
+        <p class="manuals">可以发送弹幕“<b> #积分 </b>”查询当前积分。<br><br>
+            送礼物可以加 电池*100 积分（等值于原金瓜子）。<br>
+            但是开通大航海不加积分，因为叔叔是单独计算大航海的。<br>
+            <del>用户可以通过B币兑换或者购买获得电池。电池兑换的道具可以让主播获得收入。</del><br><br>
+            免费礼物“辣条”和“小心心”为+100积分。<br><br>
+            <span style="font-size: 1.8em; font-weight: bold; color: rgb(220, 50, 50);">积分仅供娱乐，没有任何实际用途。</span>
+            <span style="font-size: 1em; font-weight: bold; color: rgb(220, 50, 50);"><del>也不能拿来娶UP主。</del></span>
+        </p>
+        <h2>钓鱼</h2>
+        <p class="manuals">发送弹幕“<b> #钓鱼 </b>”可以钓鱼。<br>
+        每次钓鱼消耗10点体力，按照鱼的类型、大小增加积分。<br><br>
+        <a href="https://wiki.mineraltown.net/saikai/Tools/Fishing.html"><b>可以钓到的鱼</b></a>的类型及鱼的出现季节，可以参考重聚矿石镇攻略中关于钓鱼的部分。
+        </p>
+        <b class="left1em">关于概率</b>
+        <p class="manuals">
+            钓鱼的判定为，先在鱼塘中挑选目标，再判定能否成功钓起目标。<br>
+            (鱼塘指全部64种鱼及其他物品。)<br><br>
+            钓起普通鱼的几率为：95%<span class="translucent">(≈72.73%)</span><br>
+            钓起垃圾的几率为：100%<span class="translucent">(≈4.69%)</span><br>
+            钓起 <b>鱼王</b> 的几率为：3%<span class="translucent">(≈0.33%)</span><br>
+            钓起 <b>海贼宝藏、古代鱼化石、力之果实</b> 的几率为：3%<span class="translucent">(≈0.14%)</span><br>
+            钓起 <b>河童、装有信的瓶子</b> 的几率为：1%<span class="translucent">(≈0.03%)</span><br><br>
+            根据鱼的大小划分为「小鱼」「中鱼」「大鱼」。<br>
+            <b class="left1em">小鱼</b>：24cm以下<br>
+            <b class="left1em">中鱼</b>：25～49cm<br>
+            <b class="left1em">大鱼</b>：50cm以上
+        </p>
+        <b class="left1em">关于积分</b>
+        <p class="manuals">
+            <b class="left1em">小鱼</b>：50 G<br>
+            <b class="left1em">中鱼</b>：120 G<br>
+            <b class="left1em">大鱼</b>：200 G<br>
+            <b class="left1em">鱼王</b>：100,000 G<br>
+            <b class="left1em">垃圾</b>：1 G<br>
+            <b class="left1em">海贼宝藏</b>：10,000 G<br>
+            <b class="left1em">古代鱼化石</b>：5,000 G<br>
+            <b class="left1em">装有信的瓶子</b>：60,000 G<br>
+            <b class="left1em">河童</b>：0 G<br>
+            <b class="left1em">力之果实</b>：0 G<br>
+        </p>
+
+    </div>
+    <div class="log">
+        <h2>粉丝团福利</h2>
+        <p class="manuals">
+            佩戴主播的粉丝勋章 “芜菁”可享受粉丝团福利。<br>
+            （一定要带着牌子发弹幕才行）<br><br>
+            1. 签到积分加倍。<br>
+            2. 体力消耗减半。
+        </p>
+        <h2>大航海福利</h2>
+        <p class="manuals">
+            舰长专属指令“<b> #一键钓鱼 </b>”，可以直接钓鱼钓到体力为空。<br>
+            其他大航海专属功能开发中……舰长们可以主动提需求。<del>需求是否采纳另议</del>
+        </p>
+    </div>
+</div>
+{% endblock %}

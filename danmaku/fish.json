@@ -1,0 +1,578 @@
+{
+    "大泷六线鱼": {
+        "name": "大泷六线鱼",
+        "size_min": 20,
+        "size_max": 40,
+        "size": "S,M",
+        "level": 3,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "竹荚鱼": {
+        "name": "竹荚鱼",
+        "size_min": 20,
+        "size_max": 40,
+        "size": "S,M",
+        "level": 3,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "拉氏大吻鱥": {
+        "name": "拉氏大吻鱥",
+        "size_min": 10,
+        "size_max": 15,
+        "size": "S",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "马苏钩吻鲑": {
+        "name": "马苏钩吻鲑",
+        "size_min": 10,
+        "size_max": 25,
+        "size": "S,M",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "黄鸡鱼": {
+        "name": "黄鸡鱼",
+        "size_min": 20,
+        "size_max": 40,
+        "size": "S,M",
+        "level": 3,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "沙丁鱼": {
+        "name": "沙丁鱼",
+        "size_min": 10,
+        "size_max": 25,
+        "size": "S,M",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鳟鱼": {
+        "name": "鳟鱼",
+        "size_min": 15,
+        "size_max": 50,
+        "size": "S,M,L",
+        "level": 4,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "珠星三块鱼": {
+        "name": "珠星三块鱼",
+        "size_min": 15,
+        "size_max": 35,
+        "size": "S,M",
+        "level": 2,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鳗鱼": {
+        "name": "鳗鱼",
+        "size_min": 50,
+        "size_max": 100,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "日本溪哥": {
+        "name": "日本溪哥",
+        "size_min": 7,
+        "size_max": 15,
+        "size": "S",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鲣鱼": {
+        "name": "鲣鱼",
+        "size_min": 70,
+        "size_max": 90,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "鲽鱼": {
+        "name": "鲽鱼",
+        "size_min": 40,
+        "size_max": 60,
+        "size": "M,L",
+        "level": 4,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "剥皮鱼": {
+        "name": "剥皮鱼",
+        "size_min": 20,
+        "size_max": 30,
+        "size": "S,M",
+        "level": 2,
+        "season": "spring autumn winter",
+        "king": false
+    },
+    "鲫鱼": {
+        "name": "鲫鱼",
+        "size_min": 7,
+        "size_max": 20,
+        "size": "S",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "兰氏鲫": {
+        "name": "兰氏鲫",
+        "size_min": 10,
+        "size_max": 30,
+        "size": "S,M",
+        "level": 2,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "褐带石斑鱼": {
+        "name": "褐带石斑鱼",
+        "size_min": 50,
+        "size_max": 70,
+        "size": "L",
+        "level": 4,
+        "season": "spring autumn winter",
+        "king": false
+    },
+    "大头鱼": {
+        "name": "大头鱼",
+        "size_min": 50,
+        "size_max": 100,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鲑鱼": {
+        "name": "鲑鱼",
+        "size_min": 30,
+        "size_max": 70,
+        "size": "M,L",
+        "level": 4,
+        "season": "summer autumn",
+        "king": false
+    },
+    "青花鱼": {
+        "name": "青花鱼",
+        "size_min": 30,
+        "size_max": 50,
+        "size": "M,L",
+        "level": 4,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "水针鱼": {
+        "name": "水针鱼",
+        "size_min": 20,
+        "size_max": 40,
+        "size": "S,M",
+        "level": 3,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "马蛟鱼": {
+        "name": "马蛟鱼",
+        "size_min": 80,
+        "size_max": 100,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer winter",
+        "king": false
+    },
+    "秋刀鱼": {
+        "name": "秋刀鱼",
+        "size_min": 20,
+        "size_max": 40,
+        "size": "S,M",
+        "level": 3,
+        "season": "autumn",
+        "king": false
+    },
+    "鬼头刀": {
+        "name": "鬼头刀",
+        "size_min": 100,
+        "size_max": 180,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "鲷鱼": {
+        "name": "鲷鱼",
+        "size_min": 80,
+        "size_max": 100,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鳕鱼": {
+        "name": "鳕鱼",
+        "size_min": 30,
+        "size_max": 50,
+        "size": "M,L",
+        "level": 4,
+        "season": "spring winter",
+        "king": false
+    },
+    "泥鳅": {
+        "name": "泥鳅",
+        "size_min": 5,
+        "size_max": 12,
+        "size": "S",
+        "level": 1,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "沙塘鳢": {
+        "name": "沙塘鳢",
+        "size_min": 15,
+        "size_max": 25,
+        "size": "S,M",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "虹鳟": {
+        "name": "虹鳟",
+        "size_min": 50,
+        "size_max": 100,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鲱鱼": {
+        "name": "鲱鱼",
+        "size_min": 15,
+        "size_max": 30,
+        "size": "S,M",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鲢鱼": {
+        "name": "鲢鱼",
+        "size_min": 50,
+        "size_max": 100,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "日本叉牙鱼": {
+        "name": "日本叉牙鱼",
+        "size_min": 10,
+        "size_max": 20,
+        "size": "S",
+        "level": 1,
+        "season": "spring autumn winter",
+        "king": false
+    },
+    "比目鱼": {
+        "name": "比目鱼",
+        "size_min": 60,
+        "size_max": 80,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "河豚": {
+        "name": "河豚",
+        "size_min": 40,
+        "size_max": 50,
+        "size": "M,L",
+        "level": 4,
+        "season": "spring winter",
+        "king": false
+    },
+    "黑鲈鱼": {
+        "name": "黑鲈鱼",
+        "size_min": 30,
+        "size_max": 50,
+        "size": "M,L",
+        "level": 4,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鰤鱼": {
+        "name": "鰤鱼",
+        "size_min": 80,
+        "size_max": 100,
+        "size": "L",
+        "level": 5,
+        "season": "spring winter",
+        "king": false
+    },
+    "蓝腮太阳鱼": {
+        "name": "蓝腮太阳鱼",
+        "size_min": 15,
+        "size_max": 25,
+        "size": "S,M",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "日本白鲫": {
+        "name": "日本白鲫",
+        "size_min": 25,
+        "size_max": 50,
+        "size": "M,L",
+        "level": 4,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "远东哲罗鱼": {
+        "name": "远东哲罗鱼",
+        "size_min": 20,
+        "size_max": 40,
+        "size": "S,M",
+        "level": 3,
+        "season": "spring autumn winter",
+        "king": false
+    },
+    "黑鲔鱼": {
+        "name": "黑鲔鱼",
+        "size_min": 150,
+        "size_max": 250,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "曼波鱼": {
+        "name": "曼波鱼",
+        "size_min": 150,
+        "size_max": 250,
+        "size": "L",
+        "level": 5,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "狮子鱼": {
+        "name": "狮子鱼",
+        "size_min": 20,
+        "size_max": 30,
+        "size": "S,M",
+        "level": 2,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "无备平鮋": {
+        "name": "无备平鮋",
+        "size_min": 20,
+        "size_max": 30,
+        "size": "S,M",
+        "level": 2,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "山女鳟": {
+        "name": "山女鳟",
+        "size_min": 20,
+        "size_max": 30,
+        "size": "S,M",
+        "level": 2,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "雷鱼": {
+        "name": "雷鱼",
+        "size_min": 40,
+        "size_max": 80,
+        "size": "M,L",
+        "level": 5,
+        "season": "spring summer autumn",
+        "king": false
+    },
+    "西太公鱼": {
+        "name": "西太公鱼",
+        "size_min": 10,
+        "size_max": 15,
+        "size": "S",
+        "level": 1,
+        "season": "spring autumn winter",
+        "king": false
+    },
+    "白带鱼": {
+        "name": "白带鱼",
+        "size_min": 100,
+        "size_max": 200,
+        "size": "M,L",
+        "level": 5,
+        "season": "summer autumn",
+        "king": false
+    },
+    "香鱼": {
+        "name": "香鱼",
+        "size_min": 10,
+        "size_max": 30,
+        "size": "M,L",
+        "level": 3,
+        "season": "summer autumn",
+        "king": false
+    },
+    "沙鮻": {
+        "name": "沙鮻",
+        "size_min": 20,
+        "size_max": 30,
+        "size": "S,M",
+        "level": 3,
+        "season": "spring summer",
+        "king": false
+    },
+    "狼牙鳝": {
+        "name": "狼牙鳝",
+        "size_min": 100,
+        "size_max": 150,
+        "size": "L",
+        "level": 5,
+        "season": "summer autumn",
+        "king": false
+    },
+    "鮟鱇鱼": {
+        "name": "鮟鱇鱼",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "spring winter",
+        "king": true
+    },
+    "乌贼": {
+        "name": "乌贼",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "spring winter",
+        "king": true
+    },
+    "伊富鱼": {
+        "name": "伊富鱼",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "spring summer autumn",
+        "king": true
+    },
+    "温泉鲇鱼": {
+        "name": "温泉鲇鱼",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "winter",
+        "king": true
+    },
+    "鲤鱼": {
+        "name": "鲤鱼",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "spring summer autumn",
+        "king": true
+    },
+    "腔棘鱼": {
+        "name": "腔棘鱼",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "spring summer autumn winter",
+        "king": true
+    },
+    "巨骨舌鱼": {
+        "name": "巨骨舌鱼",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "summer",
+        "king": true
+    },
+    "海贼宝藏": {
+        "name": "海贼宝藏",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "古代鱼化石": {
+        "name": "古代鱼化石",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 6,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "装有信的瓶子": {
+        "name": "装有信的瓶子",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "空罐子": {
+        "name": "空罐子",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "鱼骨头": {
+        "name": "鱼骨头",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "长靴": {
+        "name": "长靴",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 1,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "力之果实": {
+        "name": "力之果实",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    },
+    "河童": {
+        "name": "河童",
+        "size_min": 0,
+        "size_max": 0,
+        "size": "",
+        "level": 5,
+        "season": "spring summer autumn winter",
+        "king": false
+    }
+}

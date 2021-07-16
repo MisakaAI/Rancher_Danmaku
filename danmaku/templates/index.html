@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    {% load static %}
+    <script src="{% static 'muchang.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'bilibili.css' %}">
+    <title>{{ title }} | 哔哩哔哩直播间 3472667 积分排行榜 @勤劳的牧场主</title>
+</head>
+
+<body>
+    <div class="top">
+        <!-- <img src="{% static 'seedling-fill.svg' %}"> -->
+        <a href="/" class="top_link top_left">HOME</a>
+        <a href="https://live.bilibili.com/3472667" class="top_link" target="_blank">LIVE</a>
+        <a href="/ranklist" class="top_link">RANKLIST</a>
+        <a href="/documentation" class="top_link">DOCUMENTATION</a>
+        <a href="/about" class="top_link">ABOUT</a>
+        <!-- <img src="{% static 'seedling-fill.svg' %}"> -->
+        <form method="POST" action='/ranklist/' onsubmit="return check()">{% csrf_token %}
+            <div class="search">
+                <input type="text" value="输入B站昵称查询" name='id' onfocus="Edit(this)" onblur="Edit(this)">
+                <button type="submit"><img src="{% static 'search-line.svg' %}"></button>
+            </div>
+        </form>
+    </div>
+    {% block function %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% extends "index.html" %}
+{% block function %}
+{% load static %}
+<div class="parallax">
+    <div class="title">
+        <div class="h1bg"></div>
+        <h1><span class="red">♥</span>{{ name }}<span class="red">♥</span></h1>
+        <p class="live">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.223 3.086a1.25 1.25 0 0 1 0 1.768L17.08 5.996h1.17A3.75 3.75 0 0 1 22 9.747v7.5a3.75 3.75 0 0 1-3.75 3.75H5.75A3.75 3.75 0 0 1 2 17.247v-7.5a3.75 3.75 0 0 1 3.75-3.75h1.166L5.775 4.855a1.25 1.25 0 1 1 1.767-1.768l2.652 2.652c.079.079.145.165.198.257h3.213c.053-.092.12-.18.199-.258l2.651-2.652a1.25 1.25 0 0 1 1.768 0zm.027 5.42H5.75a1.25 1.25 0 0 0-1.247 1.157l-.003.094v7.5c0 .659.51 1.199 1.157 1.246l.093.004h12.5a1.25 1.25 0 0 0 1.247-1.157l.003-.093v-7.5c0-.69-.56-1.25-1.25-1.25zm-10 2.5c.69 0 1.25.56 1.25 1.25v1.25a1.25 1.25 0 1 1-2.5 0v-1.25c0-.69.56-1.25 1.25-1.25zm7.5 0c.69 0 1.25.56 1.25 1.25v1.25a1.25 1.25 0 1 1-2.5 0v-1.25c0-.69.56-1.25 1.25-1.25z" fill="rgba(14,166,216,1)"/></svg>
+            <a href="https://space.bilibili.com/{{ UID }}/" target="_blank"><span class="room">{{ name }}</span></a> 
+        </p>
+    </div>
+    <div class="info">
+        <div class="line"><p class="line_left">UID</p><p>{{ UID }}</p></div>
+        <div class="line"><p class="line_left">名称</p><a href="/admin/danmaku/user/{{ ID }}"><p>{{ name }}</p></a></div>
+        <div class="line"><p class="line_left">积分</p><p>{{ gold }}</p></div>
+        <div class="line"><p class="line_left">体力</p>
+            {%  if heart_is_zero %}
+                {{ physical }}
+            {% else %}
+                {% for h in heart %}<img src="{% static 'heart-fill.svg' %}">{% endfor %}
+                {% if half == False %}<img src="{% static 'heart-half.svg' %}">{% endif %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="collect">
+        <h3 style="margin-left: 50px;">鱼图鉴</h3>
+        <div class="flex_frame">
+            {% for f in all_king %}
+                {% if f in fish %}
+                    <div class="fish_frame king"><img src="{% static 'collect/大鱼.png' %}"><p class="fish_fixed">{{ f }}</p></div>
+                {% else %}
+                    <div class="fish_frame"><img class="img_gray" src="{% static 'collect/大鱼.png' %}"><p class="fish_fixed">{{ f }}</p></div>
+                {% endif %}
+            {% endfor %}
+            {% for f in all_rare %}
+                {% if f in fish %}
+                    <div class="fish_frame rare"><img src="{% get_static_prefix %}collect/{{ f }}.png"><p class="fish_fixed">{{ f }}</p></div>
+                {% else %}
+                <div class="fish_frame"><img class="img_gray" src="{% get_static_prefix %}collect/{{ f }}.png"><p class="fish_fixed">{{ f }}</p></div>
+                {% endif %}
+            {% endfor %}
+            {% for f in all_legend %}
+                {% if f in fish %}
+                    <div class="fish_frame legend"><img src="{% get_static_prefix %}collect/{{ f }}.png"><p class="fish_fixed">{{ f }}</p></div>
+                {% else %}
+                    <div class="fish_frame"><img class="img_gray" src="{% get_static_prefix %}collect/{{ f }}.png"><p class="fish_fixed">{{ f }}</p></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="flex_frame">
+            {% for f in all_fish %}
+                {% if f in fish %}
+                    <p class="fish"><b>{{ f }}</b></p>
+                {% else %}
+                    <p class="fish">{{ f }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="log">
+        <h3>用户日志</h3>
+        {% for i in log %}
+            {% if '开心' in i or '鱼王' in i%}
+                <span class="important">{{ i }}</span><br>
+            {% else %}
+                {{ i }}<br>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
