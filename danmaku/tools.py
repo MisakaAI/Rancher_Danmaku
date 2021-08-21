@@ -42,8 +42,8 @@ def search(uid=False,name=''):
 def heal(name,value:int):
     try:
         user = search(name=name)
-        if user.physical + value > 100:
-            user.physical = 100
+        if user.physical + value > user.physical_max:
+            user.physical = user.physical_max
         else:
             user.physical = user.physical + value
         user.save()
@@ -55,7 +55,16 @@ def heal(name,value:int):
 def heal_all():
     try:
         for i in User.objects.all():
-            heal(i.name,100)
+            heal(i.name,i.physical_max)
+        return True
+    except:
+        return False
+
+# 每小时回复
+def heal_10():
+    try:
+        for i in User.objects.all():
+            heal(i.name,10)
         return True
     except:
         return False
@@ -94,9 +103,22 @@ def command(user,danmu,vip,svip):
                 else:
                     return('体力不足，无法钓鱼。')
             fish = random_fish()
+            if fish[2] == '力之果实':
+                if 'fish' in user.fruit:
+                    while fish[2] == '力之果实':
+                        fish = random_fish()
+                else:
+                    user.fruit = user.fruit + 'fish '
+                    user.physical_max=user.physical_max+10
+                    user.save()
+                    return("钓起了" + fish[0] + '，体力上限+10。')
             if fish == False:
-                user.save()
-                return('在钓鱼，但是没有钓起来……')
+                if svip == True:
+                    while fish == False:
+                        fish = random_fish()
+                else:
+                    user.save()
+                    return('在钓鱼，但是没有钓起来……')
             else:
                 user.gold = user.gold + fish[3]
                 if fish[0] not in user.collect.split():
@@ -112,17 +134,13 @@ def command(user,danmu,vip,svip):
                             info = '。保护环境，人人有责！'
                         elif fish[2] == '河童':
                             info = '，？？？'
-                        elif fish[2] == '力之果实':
-                            user.physical=100
-                            user.save()
-                            info = '，体力回复满了。'
                         else:
                             info = '，这是什么？'
                         return("钓起了" + fish[0] + info)
                     else :
                         return("钓起了" + fish[0] + "，长度为" + str(fish[1]) + "cm（" + fish[2] + "）")
         else:
-            return('体力不足，无法钓鱼。')
+            return('在钓鱼，但是失败了。')
     elif danmu == '一键钓鱼':
         if user.name == '勤劳的牧场主' or svip == True:
             if user.physical >= 5:
@@ -137,7 +155,12 @@ def command(user,danmu,vip,svip):
                     if fish[0] not in user.collect.split():
                         user.collect = user.collect + fish[0] + ' '
                     if fish[2] == '力之果实':
-                        user.physical=100
+                        if 'fish' in user.fruit:
+                            while fish[2] == '力之果实':
+                                fish = random_fish()
+                        else:
+                            user.fruit = user.fruit + 'fish '
+                            user.physical_max=user.physical_max+10
                     if fish[4] == True:
                         if fish[0] + '(鱼王)' in fishes:
                             fishes[fish[0] + '(鱼王)']+=1
@@ -165,13 +188,13 @@ def command(user,danmu,vip,svip):
             if danmu == '完全回复':
                 try:
                     heal_all()
-                    user.physical=100
+                    user.physical=user.physical_max
                     user.save()
                     return '使用了完全回复，所有人的体力都满了'
                 except:
                     return '完全回复失败'
             if danmu == '回复':
-                user.physical = 100
+                user.physical = user.physical_max
                 user.save()
                 return '的体力回满了。'
             else:
@@ -184,21 +207,6 @@ def command(user,danmu,vip,svip):
                     heal(d[1],int(d[2]))
                     return '回复了' + d[1] + d[2] + '体力'
         else:
-            if danmu[2:].isdigit() == True:
-                heal_add = int(danmu[2:])
-                if user.physical + heal_add > 100:
-                    heal_add = 100 - user.physical
-            elif danmu == '回复':
-                heal_add = 100 - user.physical
-            heal_gold = 10
-            if user.gold > heal_add * heal_gold :
-                user.gold = user.gold - heal_add * heal_gold
-                user.physical = user.physical + heal_add
-                user.save()
-                return '回复了' + str(heal_add) + '体力, 扣除' + str(heal_add * heal_gold) + '积分'
-            else:
-                return '积分不足，无法回复体力'
-    elif  danmu == 'xx':
-        pass
+            return('没有权限使用该命令。')
     else:
         return '使用的命令不存在。'

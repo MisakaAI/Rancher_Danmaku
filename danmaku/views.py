@@ -42,7 +42,8 @@ def name(request, name):
         log=[]
         for i in user.log.split('\n')[-100:]:
             log.append(i)
-        log.remove("")
+        if "" in log:
+            log.remove("")
         log.reverse()
         fish = user.collect.split()
         context = {
@@ -60,7 +61,8 @@ def name(request, name):
             'all_fish':all_fish,
             'all_king':all_king,
             'all_rare':all_rare,
-            'all_legend':all_legend
+            'all_legend':all_legend,
+            'important':all_legend + all_rare + all_king,
         }
         return render(request, 'user.html', context)
     else :
@@ -77,3 +79,6 @@ def about(request):
         "title" : '关于本站',
     }
     return render(request, 'about.html', context)
+
+def danmaku(request):
+    return render(request, 'danmaku.html')

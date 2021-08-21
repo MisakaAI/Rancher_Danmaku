@@ -1,0 +1,12 @@
+[Unit]
+Description=muchang_live
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

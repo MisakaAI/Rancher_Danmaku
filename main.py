@@ -6,11 +6,17 @@ import re
 import sys
 import django
 import asyncio
+import datetime
 import websockets
 from django.conf import settings
 from asgiref.sync import sync_to_async
 from bilibili_api import live, sync
 room = live.LiveDanmaku(3472667)
+
+async def hello(name):
+    uri = "ws://live.mineraltown.net:5678"
+    async with websockets.connect(uri) as websocket:
+        await websocket.send(name)
 
 @sync_to_async
 def django_(msg):
@@ -43,8 +49,12 @@ def django_(msg):
             user = search(uid,name)
             log(user,add_return)
         command_return = command(user,danmu[1:].strip(),vip,svip)
-        if command_return not in ['已签到！','体力不足','命令']:
+        if command_return not in ['已签到','体力','积分','命令']:
             log(user,command_return)
+        return_msg = '<snap class="info">' + str(name) + str(command_return) + '</snap>'
+    else:
+        return_msg = '<snap class="name">' + str(name) + '：</snap><snap class="msg">' + str(danmu) + '</snap>'
+    return return_msg
 
 @sync_to_async
 def django_gift(msg):
@@ -56,7 +66,9 @@ def django_gift(msg):
     price = msg['data']['data']['price']
     user = search(uid,name)
     # 免费礼物额外判定
-    if giftName == '小心心' or giftName == '辣条':
+    if giftName == '辣条':
+        price=10
+    elif giftName == '小心心':
         price=100
     if user == None:
         add_return = add(uid=uid,name=name)
@@ -70,6 +82,12 @@ def django_gift(msg):
 @room.on("DANMU_MSG")
 async def on_danmu(msg):
     a = await django_(msg)
+    await hello(a)
+    with open("muchang_live.log", "a", encoding="utf-8") as f:
+        d = datetime.datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
+        f.writelines(d + ' > ' + msg['data']['info'][2][1] + ':' + msg['data']['info'][1] + '\n')
+        if 'class="msg"' not in a:
+            f.writelines(d + ' < ' + re.sub('<.*?>','',a) + '\n')
 
 # 礼物
 @room.on("SEND_GIFT")

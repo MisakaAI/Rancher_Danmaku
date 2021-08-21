@@ -51,11 +51,11 @@ def random_fish():
             s='杂物'
             gold=1
         elif f.name == "海贼宝藏" :
-            gold=10000
+            gold=1000
         elif f.name == "古代鱼化石" :
-            gold=5000
+            gold=500
         elif f.name == "装有信的瓶子" :
-            gold=60000
+            gold=6000
         elif f.name == "河童" :
             s='河童'
             gold=0
@@ -74,7 +74,7 @@ def random_fish():
                 s='大鱼'
                 gold=200
         if f.king == True:
-            gold=100000
+            gold=0
         return (f.name,size,s,gold,f.king)
     else:
         return False
